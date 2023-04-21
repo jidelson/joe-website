@@ -5,8 +5,8 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '/build', 'index.html'));
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../frontend/public', 'index.html'));
   });  
 
 const PORT = process.env.PORT || 5000;
